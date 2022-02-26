@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Algorithms\ValidParentheses.csproj" />
+    <ProjectReference Include="..\ValidParentheses\ValidParentheses.csproj" />
   </ItemGroup>
 
 </Project>
