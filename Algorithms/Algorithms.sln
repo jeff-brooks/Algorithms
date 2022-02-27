@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidParenthesesTest", "Val
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidParentheses", "ValidParentheses\ValidParentheses.csproj", "{12B0CA6D-82EE-49E9-8B00-A6663B7656E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinStack", "MinStack\MinStack.csproj", "{C6DB7733-8861-4A41-9D53-7BBB237DB171}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinStackTest", "MinStackTest\MinStackTest.csproj", "{06508DB5-BF6B-4BBF-8DBA-54EE72260848}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{12B0CA6D-82EE-49E9-8B00-A6663B7656E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12B0CA6D-82EE-49E9-8B00-A6663B7656E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12B0CA6D-82EE-49E9-8B00-A6663B7656E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6DB7733-8861-4A41-9D53-7BBB237DB171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DB7733-8861-4A41-9D53-7BBB237DB171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DB7733-8861-4A41-9D53-7BBB237DB171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DB7733-8861-4A41-9D53-7BBB237DB171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06508DB5-BF6B-4BBF-8DBA-54EE72260848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06508DB5-BF6B-4BBF-8DBA-54EE72260848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06508DB5-BF6B-4BBF-8DBA-54EE72260848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06508DB5-BF6B-4BBF-8DBA-54EE72260848}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
