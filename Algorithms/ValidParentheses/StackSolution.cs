@@ -14,8 +14,6 @@ namespace ValidParentheses
 	/// </summary>
 	public static class StackSolution
 	{
-		
-
 		private static readonly char[] openChars = new char[3] { '(', '{', '[' };
 		private static readonly char[] closeChars = new char[] { ')', '}', ']' };
 
@@ -28,7 +26,7 @@ namespace ValidParentheses
 			}
 			
 			Stack<char> opened = new Stack<char>();
-			int matchesFound = 0;
+			bool matchesFound = false;
 
 			for (int i = 0; i < s.Length; i++)
 			{
@@ -62,14 +60,14 @@ namespace ValidParentheses
 
 						if(leftCharIndex == rightCharIndex && leftCharIndex > -1)
 						{
-							matchesFound++;
+							matchesFound = true;
 							continue;
 						}
 						return false;
 				}
 			}
 			
-			return matchesFound > 0 && opened.Count == 0;
+			return matchesFound && opened.Count == 0;
 		}
 	}
 }
