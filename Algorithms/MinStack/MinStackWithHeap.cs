@@ -19,6 +19,7 @@ namespace MinStack
 		{
 			stack.Push(val);
 
+			//check if array needs to expand
 			if (heap.Length == heapSize)
 			{
 				int[] temp = new int[heapSize * 2];
@@ -26,28 +27,29 @@ namespace MinStack
 				heap = temp;
 			}
 
-			//add new item to the bottom of the heap, then swim
+			//add new item to the bottom of the heap, then swim upwards
 			heap[heapSize++] = val;
 			HeapSwim();
 		}
 
 		public void Pop()
 		{
-			//remove from stack
+			//Remove from stack
 			int valtoRemove = stack.Pop();
 
-			//find the heap index for this value
+			//Find the heap index for this value
 			int searchIndex = Array.IndexOf(heap, valtoRemove);
 
 			if (searchIndex == -1)
 			{
+				//This should not happen. Items in the stack and on the heap are expected to align.
 				throw new Exception("Could not find element from stack in heap.");
 			}
 
-			//remove this value, replace it with the largest value in the heap
+			//Remove this value, replace it with the a value from the bottom of the heap
 			heap[searchIndex] = heap[heapSize-- - 1];
 
-			//swim the smallest element down
+			//Swim the element down to it's rightful place in the heap.
 			HeapSink(searchIndex);
 		}
 
@@ -64,7 +66,7 @@ namespace MinStack
 
 		private void HeapSink(int startingIndex)
 		{
-			//end swim if there are no children
+			//End swim if the given index has no children.
 			if (heapSize < startingIndex * 2 + 1)
 			{
 				return;
@@ -72,7 +74,8 @@ namespace MinStack
 
 			int value = heap[startingIndex];
 
-			//compare to children
+			//Compare value to children to see if further heap adjustments are needed.
+			//Begin on the left side, also check the right side if it exists.
 			int leftChildIndex = startingIndex * 2 + 1;
 			int leftChildValue = heap[leftChildIndex];
 

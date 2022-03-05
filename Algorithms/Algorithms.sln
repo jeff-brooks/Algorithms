@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidParenthesesTest", "ValidParenthesesTest\ValidParenthesesTest.csproj", "{BA324E26-F82E-49FD-A065-682D469884F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidParenthesesTest", "ValidParenthesesTest\ValidParenthesesTest.csproj", "{BA324E26-F82E-49FD-A065-682D469884F0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidParentheses", "ValidParentheses\ValidParentheses.csproj", "{12B0CA6D-82EE-49E9-8B00-A6663B7656E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinStack", "MinStack\MinStack.csproj", "{C6DB7733-8861-4A41-9D53-7BBB237DB171}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinStack", "MinStack\MinStack.csproj", "{C6DB7733-8861-4A41-9D53-7BBB237DB171}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinStackTest", "MinStackTest\MinStackTest.csproj", "{06508DB5-BF6B-4BBF-8DBA-54EE72260848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinStackTest", "MinStackTest\MinStackTest.csproj", "{06508DB5-BF6B-4BBF-8DBA-54EE72260848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseLinkedList", "ReverseLinkedList\ReverseLinkedList.csproj", "{78EB65ED-5107-40B5-879D-1A1910BD63BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseLinkedListTest", "ReverseLinkedListTest\ReverseLinkedListTest.csproj", "{330FF14B-BF49-4764-89F4-01EDF688CEBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{06508DB5-BF6B-4BBF-8DBA-54EE72260848}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06508DB5-BF6B-4BBF-8DBA-54EE72260848}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06508DB5-BF6B-4BBF-8DBA-54EE72260848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78EB65ED-5107-40B5-879D-1A1910BD63BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78EB65ED-5107-40B5-879D-1A1910BD63BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78EB65ED-5107-40B5-879D-1A1910BD63BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78EB65ED-5107-40B5-879D-1A1910BD63BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{330FF14B-BF49-4764-89F4-01EDF688CEBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330FF14B-BF49-4764-89F4-01EDF688CEBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330FF14B-BF49-4764-89F4-01EDF688CEBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330FF14B-BF49-4764-89F4-01EDF688CEBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
