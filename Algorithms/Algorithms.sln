@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseLinkedList", "Revers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseLinkedListTest", "ReverseLinkedListTest\ReverseLinkedListTest.csproj", "{330FF14B-BF49-4764-89F4-01EDF688CEBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrappingRainWater", "TrappingRainWater\TrappingRainWater.csproj", "{FA4C761F-A7E0-4D15-99FD-91A56CF7DBD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrappingRainWaterTest", "TrappingRainWaterTest\TrappingRainWaterTest.csproj", "{D1128137-89B3-4D79-8550-76F7A1CE1D97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{330FF14B-BF49-4764-89F4-01EDF688CEBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{330FF14B-BF49-4764-89F4-01EDF688CEBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{330FF14B-BF49-4764-89F4-01EDF688CEBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4C761F-A7E0-4D15-99FD-91A56CF7DBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4C761F-A7E0-4D15-99FD-91A56CF7DBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4C761F-A7E0-4D15-99FD-91A56CF7DBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4C761F-A7E0-4D15-99FD-91A56CF7DBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1128137-89B3-4D79-8550-76F7A1CE1D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1128137-89B3-4D79-8550-76F7A1CE1D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1128137-89B3-4D79-8550-76F7A1CE1D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1128137-89B3-4D79-8550-76F7A1CE1D97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
