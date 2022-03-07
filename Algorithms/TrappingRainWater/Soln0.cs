@@ -14,9 +14,11 @@
 		/// ideas to boost peformance:
 		///		- find a way to take a bigger "bite" out of the input array - use a bigger "row size"
 		///		- "trim" the input array of leading and trailing zero's, by keeping track of the first and last 
-		///		block index outside of the loop.
+		///		block index outside of the loop. 
+		///		UPDATE: Done - didnt make an appreciable difference in performance.
 		///		
-		///		- a more performant overall approach, of course.
+		///		- a more performant overall approach, of course. 
+		///		UPDATE: one such approach found and implemented
 		/// </summary>
 		/// <param name="height"></param>
 		/// <returns></returns>
@@ -28,37 +30,43 @@
 			}
 			bool rowHasBlock;
 			int rainWaterBlocks = 0;
+			int startIndex = 0;
+			int stopIndex = height.Length - 1;
 			do
 			{
-				rowHasBlock = false;
-				//find the leftmost block
-				int firstBlockIndex = height.Length;
-				for (int i = 0; i < height.Length; i++)
+				if(stopIndex - startIndex < 2)
+				{
+					rowHasBlock = false;
+					continue;
+				}
+				bool rowHasLeftBlock = false;
+				for (int i = startIndex; i < height.Length; i++)
 				{
 					if (height[i] > 0)
 					{
-						rowHasBlock = true;
-						firstBlockIndex = i;
-						break;
+						rowHasLeftBlock = true;
+						startIndex = i;
+						break ;
 					}
 				}
 
-				//find the rightmost block
-				int lastBlockIndex = 0;
-				for (int j = height.Length - 1; j > firstBlockIndex; j--)
+				bool rowHasRightBlock = false;
+				for (int j = stopIndex; j > startIndex; j--)
 				{
 					if (height[j] > 0)
 					{
-						rowHasBlock = true;
-						lastBlockIndex = j;
+						rowHasRightBlock = true;
+						stopIndex = j;
 						break;
 					}
 				}
 
-				if (rowHasBlock && firstBlockIndex < lastBlockIndex && (lastBlockIndex - firstBlockIndex) > 1)
+				rowHasBlock = rowHasLeftBlock && rowHasRightBlock;
+
+				if (rowHasBlock && startIndex < stopIndex && (stopIndex - startIndex) > 1)
 				{
 					//add up unblocked spaces between left most and right most blocks
-					for (int l = firstBlockIndex + 1; l < lastBlockIndex; l++)
+					for (int l = startIndex + 1; l < stopIndex; l++)
 					{
 						if (height[l] == 0)
 						{
