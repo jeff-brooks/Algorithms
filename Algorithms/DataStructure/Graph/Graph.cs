@@ -71,18 +71,6 @@ namespace DataStructure.Graph
 			AddEdge(v, w, weight);
 		}
 
-		//public bool HasEdge(Edge<t> e)
-		//{
-		//	return Edges.Contains(e);
-		//	//return adjacencyList.ContainsKey(e.First) && adjacencyList[e.First].ContainsKey(e.Second);
-		//}
-
-		//public bool HasEdge(t v, t w, int weight)
-		//{
-		//	return Edges.Any(e => e.First.Equals(v) && e.Second.Equals(w) && e.Weight.Equals(weight));
-		//	//return adjacencyList.ContainsKey(v) && adjacencyList[v].ContainsKey(w) && adjacencyList[v][w] == weight;
-		//}
-
 		/// <summary>
 		/// remove edge from graph
 		/// </summary>
@@ -96,9 +84,6 @@ namespace DataStructure.Graph
 			adjacencyList[w].Remove(v);
 
 			Edges.Remove(e);
-
-			//CheckForVertexRemoval(v);
-			//CheckForVertexRemoval(w);
 		}
 
 		public void RemoveVertex(t vertex)
@@ -120,15 +105,6 @@ namespace DataStructure.Graph
 			//remove vertex
 			Verticies.Remove(vertex);
 		}
-
-		//private void CheckForVertexRemoval(t vertex)
-		//{
-		//	if(adjacencyList[vertex].Keys.Count == 0)
-		//	{
-		//		Verticies.Remove(vertex);
-		//		adjacencyList.Remove(vertex);
-		//	}
-		//}
 
 		/// <summary>
 		/// find the edge connecting v and w
