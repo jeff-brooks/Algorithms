@@ -3,9 +3,9 @@
 	public class Node<t>
 	{
 		public readonly Node<t> Next;
-		public readonly int Value;
+		public readonly t Value;
 
-		public Node(Node<t> nextNode, int value)
+		public Node(Node<t> nextNode, t value)
 		{
 			Next = nextNode;
 			Value = value;
