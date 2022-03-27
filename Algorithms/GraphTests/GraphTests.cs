@@ -176,5 +176,47 @@ namespace GraphTests
 				Assert.AreEqual('b', enumerator.Current);
 			}
 		}
+
+		[TestMethod]
+		public void Dijkstra()
+		{
+			IGraph<char> g = new BiDirectionalWeightedGraph<char>();
+			g.AddEdge('a', 'b', 8);
+			g.AddEdge('a', 'e', 4);
+			g.AddEdge('a', 'd', 9);
+			g.AddEdge('b', 'c', 1);
+			g.AddEdge('c', 'b', 2);
+			g.AddEdge('c', 'd', 3);
+			g.AddEdge('d', 'e', 7);
+			g.AddEdge('d', 'c', 2);
+			g.AddEdge('e', 'c', 1);
+
+			var results = new Dijkstra<char>(g);
+
+			Assert.AreEqual(7, results.GetSmallestDistanceBetween('a', 'b'));	//a -> d -> c -> d
+			Assert.AreEqual(5, results.GetSmallestDistanceBetween('a', 'c'));	//a -> d -> c
+			Assert.AreEqual(8, results.GetSmallestDistanceBetween('a', 'd'));	//a -> d
+			Assert.AreEqual(4, results.GetSmallestDistanceBetween('a', 'e'));	//a -> e
+			
+			Assert.AreEqual(int.MaxValue, results.GetSmallestDistanceBetween('b', 'a')); //impossible path
+			Assert.AreEqual(1, results.GetSmallestDistanceBetween('b', 'c'));	// b -> c
+			Assert.AreEqual(4, results.GetSmallestDistanceBetween('b', 'd'));	// b -> c -> d
+			Assert.AreEqual(11, results.GetSmallestDistanceBetween('b', 'e'));// b -> c -> d -> e
+
+			Assert.AreEqual(int.MaxValue, results.GetSmallestDistanceBetween('c', 'a')); //impossible path
+			Assert.AreEqual(2, results.GetSmallestDistanceBetween('c', 'b'));	// c -> b
+			Assert.AreEqual(3, results.GetSmallestDistanceBetween('c', 'd'));	// c -> d
+			Assert.AreEqual(10, results.GetSmallestDistanceBetween('c', 'e'));// c -> d -> e
+
+			Assert.AreEqual(int.MaxValue, results.GetSmallestDistanceBetween('d', 'a')); //impossible path
+			Assert.AreEqual(4, results.GetSmallestDistanceBetween('d', 'b'));	// d -> c -> b
+			Assert.AreEqual(2, results.GetSmallestDistanceBetween('d', 'c'));	// d -> c
+			Assert.AreEqual(7, results.GetSmallestDistanceBetween('d', 'e'));	// d -> e
+
+			Assert.AreEqual(int.MaxValue, results.GetSmallestDistanceBetween('e', 'a')); //impossible path
+			Assert.AreEqual(3, results.GetSmallestDistanceBetween('e', 'b'));	// e -> c -> b
+			Assert.AreEqual(1, results.GetSmallestDistanceBetween('e', 'c'));	// e -> c
+			Assert.AreEqual(4, results.GetSmallestDistanceBetween('e', 'd'));	// e -> c -> d
+		}
 	}
 }
